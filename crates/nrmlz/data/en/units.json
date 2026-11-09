@@ -1,0 +1,800 @@
+{
+ "_note": "English units after a number (nrmlz). Entry: [singular, plural, space required 0/1]. Cross-checked against NeMo text processing's en unit list; written for nrmlz.",
+ "units": {
+  "mm": [
+   "millimeter",
+   "millimeters",
+   0
+  ],
+  "cm": [
+   "centimeter",
+   "centimeters",
+   0
+  ],
+  "dm": [
+   "decimeter",
+   "decimeters",
+   0
+  ],
+  "m": [
+   "meter",
+   "meters",
+   1
+  ],
+  "km": [
+   "kilometer",
+   "kilometers",
+   0
+  ],
+  "µm": [
+   "micrometer",
+   "micrometers",
+   0
+  ],
+  "μm": [
+   "micrometer",
+   "micrometers",
+   0
+  ],
+  "nm": [
+   "nanometer",
+   "nanometers",
+   0
+  ],
+  "in": [
+   "inch",
+   "inches",
+   1
+  ],
+  "ft": [
+   "foot",
+   "feet",
+   0
+  ],
+  "yd": [
+   "yard",
+   "yards",
+   0
+  ],
+  "mi": [
+   "mile",
+   "miles",
+   0
+  ],
+  "mm²": [
+   "square millimeter",
+   "square millimeters",
+   0
+  ],
+  "mm2": [
+   "square millimeter",
+   "square millimeters",
+   0
+  ],
+  "cm²": [
+   "square centimeter",
+   "square centimeters",
+   0
+  ],
+  "cm2": [
+   "square centimeter",
+   "square centimeters",
+   0
+  ],
+  "m²": [
+   "square meter",
+   "square meters",
+   0
+  ],
+  "m2": [
+   "square meter",
+   "square meters",
+   0
+  ],
+  "sq m": [
+   "square meter",
+   "square meters",
+   0
+  ],
+  "km²": [
+   "square kilometer",
+   "square kilometers",
+   0
+  ],
+  "km2": [
+   "square kilometer",
+   "square kilometers",
+   0
+  ],
+  "sq km": [
+   "square kilometer",
+   "square kilometers",
+   0
+  ],
+  "sq ft": [
+   "square foot",
+   "square feet",
+   0
+  ],
+  "ft²": [
+   "square foot",
+   "square feet",
+   0
+  ],
+  "sqft": [
+   "square foot",
+   "square feet",
+   0
+  ],
+  "sq mi": [
+   "square mile",
+   "square miles",
+   0
+  ],
+  "mi²": [
+   "square mile",
+   "square miles",
+   0
+  ],
+  "ha": [
+   "hectare",
+   "hectares",
+   0
+  ],
+  "ac": [
+   "acre",
+   "acres",
+   1
+  ],
+  "cm³": [
+   "cubic centimeter",
+   "cubic centimeters",
+   0
+  ],
+  "cm3": [
+   "cubic centimeter",
+   "cubic centimeters",
+   0
+  ],
+  "cc": [
+   "cubic centimeter",
+   "cubic centimeters",
+   0
+  ],
+  "m³": [
+   "cubic meter",
+   "cubic meters",
+   0
+  ],
+  "m3": [
+   "cubic meter",
+   "cubic meters",
+   0
+  ],
+  "ft³": [
+   "cubic foot",
+   "cubic feet",
+   0
+  ],
+  "cu ft": [
+   "cubic foot",
+   "cubic feet",
+   0
+  ],
+  "ml": [
+   "milliliter",
+   "milliliters",
+   0
+  ],
+  "mL": [
+   "milliliter",
+   "milliliters",
+   0
+  ],
+  "cl": [
+   "centiliter",
+   "centiliters",
+   0
+  ],
+  "cL": [
+   "centiliter",
+   "centiliters",
+   0
+  ],
+  "dl": [
+   "deciliter",
+   "deciliters",
+   0
+  ],
+  "dL": [
+   "deciliter",
+   "deciliters",
+   0
+  ],
+  "l": [
+   "liter",
+   "liters",
+   1
+  ],
+  "L": [
+   "liter",
+   "liters",
+   1
+  ],
+  "gal": [
+   "gallon",
+   "gallons",
+   0
+  ],
+  "fl oz": [
+   "fluid ounce",
+   "fluid ounces",
+   0
+  ],
+  "qt": [
+   "quart",
+   "quarts",
+   0
+  ],
+  "pt": [
+   "pint",
+   "pints",
+   1
+  ],
+  "mg": [
+   "milligram",
+   "milligrams",
+   0
+  ],
+  "µg": [
+   "microgram",
+   "micrograms",
+   0
+  ],
+  "μg": [
+   "microgram",
+   "micrograms",
+   0
+  ],
+  "mcg": [
+   "microgram",
+   "micrograms",
+   0
+  ],
+  "g": [
+   "gram",
+   "grams",
+   1
+  ],
+  "kg": [
+   "kilogram",
+   "kilograms",
+   0
+  ],
+  "t": [
+   "metric ton",
+   "metric tons",
+   1
+  ],
+  "lb": [
+   "pound",
+   "pounds",
+   0
+  ],
+  "lbs": [
+   "pound",
+   "pounds",
+   0
+  ],
+  "oz": [
+   "ounce",
+   "ounces",
+   0
+  ],
+  "st": [
+   "stone",
+   "stone",
+   1
+  ],
+  "ms": [
+   "millisecond",
+   "milliseconds",
+   0
+  ],
+  "µs": [
+   "microsecond",
+   "microseconds",
+   0
+  ],
+  "μs": [
+   "microsecond",
+   "microseconds",
+   0
+  ],
+  "ns": [
+   "nanosecond",
+   "nanoseconds",
+   0
+  ],
+  "s": [
+   "second",
+   "seconds",
+   1
+  ],
+  "sec": [
+   "second",
+   "seconds",
+   1
+  ],
+  "secs": [
+   "second",
+   "seconds",
+   1
+  ],
+  "min": [
+   "minute",
+   "minutes",
+   0
+  ],
+  "mins": [
+   "minute",
+   "minutes",
+   0
+  ],
+  "h": [
+   "hour",
+   "hours",
+   1
+  ],
+  "hr": [
+   "hour",
+   "hours",
+   1
+  ],
+  "hrs": [
+   "hour",
+   "hours",
+   1
+  ],
+  "d": [
+   "day",
+   "days",
+   1
+  ],
+  "wk": [
+   "week",
+   "weeks",
+   0
+  ],
+  "wks": [
+   "week",
+   "weeks",
+   0
+  ],
+  "yr": [
+   "year",
+   "years",
+   0
+  ],
+  "yrs": [
+   "year",
+   "years",
+   0
+  ],
+  "km/h": [
+   "kilometer per hour",
+   "kilometers per hour",
+   0
+  ],
+  "kph": [
+   "kilometer per hour",
+   "kilometers per hour",
+   0
+  ],
+  "kmh": [
+   "kilometer per hour",
+   "kilometers per hour",
+   0
+  ],
+  "mph": [
+   "mile per hour",
+   "miles per hour",
+   0
+  ],
+  "m/s": [
+   "meter per second",
+   "meters per second",
+   0
+  ],
+  "m/s²": [
+   "meter per second squared",
+   "meters per second squared",
+   0
+  ],
+  "m/s2": [
+   "meter per second squared",
+   "meters per second squared",
+   0
+  ],
+  "kn": [
+   "knot",
+   "knots",
+   0
+  ],
+  "kt": [
+   "knot",
+   "knots",
+   0
+  ],
+  "kts": [
+   "knot",
+   "knots",
+   0
+  ],
+  "°C": [
+   "degree Celsius",
+   "degrees Celsius",
+   0
+  ],
+  "℃": [
+   "degree Celsius",
+   "degrees Celsius",
+   0
+  ],
+  "° C": [
+   "degree Celsius",
+   "degrees Celsius",
+   0
+  ],
+  "°F": [
+   "degree Fahrenheit",
+   "degrees Fahrenheit",
+   0
+  ],
+  "℉": [
+   "degree Fahrenheit",
+   "degrees Fahrenheit",
+   0
+  ],
+  "° F": [
+   "degree Fahrenheit",
+   "degrees Fahrenheit",
+   0
+  ],
+  "K": [
+   "kelvin",
+   "kelvin",
+   1
+  ],
+  "°": [
+   "degree",
+   "degrees",
+   0
+  ],
+  "Hz": [
+   "hertz",
+   "hertz",
+   0
+  ],
+  "kHz": [
+   "kilohertz",
+   "kilohertz",
+   0
+  ],
+  "MHz": [
+   "megahertz",
+   "megahertz",
+   0
+  ],
+  "GHz": [
+   "gigahertz",
+   "gigahertz",
+   0
+  ],
+  "W": [
+   "watt",
+   "watts",
+   1
+  ],
+  "kW": [
+   "kilowatt",
+   "kilowatts",
+   0
+  ],
+  "MW": [
+   "megawatt",
+   "megawatts",
+   0
+  ],
+  "GW": [
+   "gigawatt",
+   "gigawatts",
+   0
+  ],
+  "Wh": [
+   "watt hour",
+   "watt hours",
+   0
+  ],
+  "kWh": [
+   "kilowatt hour",
+   "kilowatt hours",
+   0
+  ],
+  "MWh": [
+   "megawatt hour",
+   "megawatt hours",
+   0
+  ],
+  "GWh": [
+   "gigawatt hour",
+   "gigawatt hours",
+   0
+  ],
+  "TWh": [
+   "terawatt hour",
+   "terawatt hours",
+   0
+  ],
+  "V": [
+   "volt",
+   "volts",
+   1
+  ],
+  "kV": [
+   "kilovolt",
+   "kilovolts",
+   0
+  ],
+  "mV": [
+   "millivolt",
+   "millivolts",
+   0
+  ],
+  "A": [
+   "ampere",
+   "amperes",
+   1
+  ],
+  "mA": [
+   "milliampere",
+   "milliamperes",
+   0
+  ],
+  "mAh": [
+   "milliampere hour",
+   "milliampere hours",
+   0
+  ],
+  "Ah": [
+   "ampere hour",
+   "ampere hours",
+   0
+  ],
+  "Ω": [
+   "ohm",
+   "ohms",
+   0
+  ],
+  "kΩ": [
+   "kiloohm",
+   "kiloohms",
+   0
+  ],
+  "J": [
+   "joule",
+   "joules",
+   1
+  ],
+  "kJ": [
+   "kilojoule",
+   "kilojoules",
+   0
+  ],
+  "cal": [
+   "calorie",
+   "calories",
+   0
+  ],
+  "kcal": [
+   "kilocalorie",
+   "kilocalories",
+   0
+  ],
+  "N": [
+   "newton",
+   "newtons",
+   1
+  ],
+  "Nm": [
+   "newton meter",
+   "newton meters",
+   0
+  ],
+  "Pa": [
+   "pascal",
+   "pascals",
+   0
+  ],
+  "kPa": [
+   "kilopascal",
+   "kilopascals",
+   0
+  ],
+  "hPa": [
+   "hectopascal",
+   "hectopascals",
+   0
+  ],
+  "MPa": [
+   "megapascal",
+   "megapascals",
+   0
+  ],
+  "bar": [
+   "bar",
+   "bars",
+   0
+  ],
+  "mbar": [
+   "millibar",
+   "millibars",
+   0
+  ],
+  "psi": [
+   "psi",
+   "psi",
+   0
+  ],
+  "atm": [
+   "atmosphere",
+   "atmospheres",
+   0
+  ],
+  "B": [
+   "byte",
+   "bytes",
+   1
+  ],
+  "kB": [
+   "kilobyte",
+   "kilobytes",
+   0
+  ],
+  "KB": [
+   "kilobyte",
+   "kilobytes",
+   0
+  ],
+  "MB": [
+   "megabyte",
+   "megabytes",
+   0
+  ],
+  "GB": [
+   "gigabyte",
+   "gigabytes",
+   0
+  ],
+  "TB": [
+   "terabyte",
+   "terabytes",
+   0
+  ],
+  "PB": [
+   "petabyte",
+   "petabytes",
+   0
+  ],
+  "KiB": [
+   "kibibyte",
+   "kibibytes",
+   0
+  ],
+  "MiB": [
+   "mebibyte",
+   "mebibytes",
+   0
+  ],
+  "GiB": [
+   "gibibyte",
+   "gibibytes",
+   0
+  ],
+  "bit": [
+   "bit",
+   "bits",
+   0
+  ],
+  "bits": [
+   "bit",
+   "bits",
+   0
+  ],
+  "kbps": [
+   "kilobit per second",
+   "kilobits per second",
+   0
+  ],
+  "kbit/s": [
+   "kilobit per second",
+   "kilobits per second",
+   0
+  ],
+  "Mbps": [
+   "megabit per second",
+   "megabits per second",
+   0
+  ],
+  "Mbit/s": [
+   "megabit per second",
+   "megabits per second",
+   0
+  ],
+  "Gbps": [
+   "gigabit per second",
+   "gigabits per second",
+   0
+  ],
+  "Gbit/s": [
+   "gigabit per second",
+   "gigabits per second",
+   0
+  ],
+  "rpm": [
+   "revolution per minute",
+   "revolutions per minute",
+   0
+  ],
+  "dB": [
+   "decibel",
+   "decibels",
+   0
+  ],
+  "lm": [
+   "lumen",
+   "lumens",
+   0
+  ],
+  "lx": [
+   "lux",
+   "lux",
+   0
+  ],
+  "mol": [
+   "mole",
+   "moles",
+   0
+  ],
+  "mmol": [
+   "millimole",
+   "millimoles",
+   0
+  ],
+  "ppm": [
+   "part per million",
+   "parts per million",
+   0
+  ],
+  "ppb": [
+   "part per billion",
+   "parts per billion",
+   0
+  ],
+  "mmHg": [
+   "millimeter of mercury",
+   "millimeters of mercury",
+   0
+  ],
+  "hp": [
+   "horsepower",
+   "horsepower",
+   0
+  ],
+  "mpg": [
+   "mile per gallon",
+   "miles per gallon",
+   0
+  ]
+ }
+}

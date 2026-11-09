@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "source_sha256": "65db0bd939c43387f9f5b4bb2ff62e62dce44c53cc2238f56691a140372f5f63",
+    "source_revision": "f3c67e047bea6b7c40bc2466c0fdaad51d8ce67d",
+    "nrmlz_revision": "020e212df02f8965e07d0cc505a7689e4fa176af",
+    "nrmlz_dirty": true,
+    "binary_sha256": "5438d368dbb8731311c5641f2d6e44923173f302d8dee22d585e54830ddb6131",
+    "judge_model": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "judge_prompt_sha256": "4cdb768f229485c874635582bb708e55232310446798f72e3f98e2cc1110e566",
+    "system_outputs_sha256": {
+      "nrmlz": "e52060585ebe6f4bec8fe660f6e4bf756fbee51568a41840d1f73b297d159598",
+      "nrmlz-reference": "81ed16ba5813c42a873b308bcb5781dbcb3486b86f70cbd8678b92594c92b066",
+      "nemo": "a628b5ec8f55033d6df6c6142b37d1605dadc6ade76256b57ddef5a3439b7c1c",
+      "verbalize": "b0ff520d68c3fd0cf8a5694dae11de28322342d7174762f96f9b311f3aa9dc0d"
+    }
+  },
+  "scores": {
+    "nrmlz/test": {
+      "correct": 217,
+      "acceptable": 9,
+      "recoverable": 12,
+      "unrecoverable": 28,
+      "unjudged": 4,
+      "n": 270,
+      "wer": 0.1933534743202417,
+      "exact": 153
+    },
+    "nrmlz-reference/test": {
+      "correct": 163,
+      "acceptable": 10,
+      "recoverable": 40,
+      "unrecoverable": 57,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.3008200258955546,
+      "exact": 119
+    },
+    "nemo/test": {
+      "correct": 100,
+      "acceptable": 7,
+      "recoverable": 67,
+      "unrecoverable": 96,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.5463962019853259,
+      "exact": 92
+    },
+    "verbalize/test": {
+      "correct": 190,
+      "acceptable": 7,
+      "recoverable": 31,
+      "unrecoverable": 42,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.28744065602071645,
+      "exact": 178
+    },
+    "nrmlz/dev": {
+      "correct": 234,
+      "acceptable": 7,
+      "recoverable": 6,
+      "unrecoverable": 18,
+      "unjudged": 5,
+      "n": 270,
+      "wer": 0.1779964221824687,
+      "exact": 156
+    },
+    "nrmlz-reference/dev": {
+      "correct": 163,
+      "acceptable": 7,
+      "recoverable": 39,
+      "unrecoverable": 61,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.3041144901610018,
+      "exact": 106
+    },
+    "nemo/dev": {
+      "correct": 94,
+      "acceptable": 11,
+      "recoverable": 69,
+      "unrecoverable": 96,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.4941860465116279,
+      "exact": 90
+    },
+    "verbalize/dev": {
+      "correct": 187,
+      "acceptable": 8,
+      "recoverable": 31,
+      "unrecoverable": 44,
+      "unjudged": 0,
+      "n": 270,
+      "wer": 0.268783542039356,
+      "exact": 173
+    },
+    "nrmlz/all": {
+      "correct": 451,
+      "acceptable": 16,
+      "recoverable": 18,
+      "unrecoverable": 46,
+      "unjudged": 9,
+      "n": 540,
+      "wer": 0.18581155282231496,
+      "exact": 309
+    },
+    "nrmlz-reference/all": {
+      "correct": 326,
+      "acceptable": 17,
+      "recoverable": 79,
+      "unrecoverable": 118,
+      "unjudged": 0,
+      "n": 540,
+      "wer": 0.3024379529980233,
+      "exact": 225
+    },
+    "nemo/all": {
+      "correct": 194,
+      "acceptable": 18,
+      "recoverable": 136,
+      "unrecoverable": 192,
+      "unjudged": 0,
+      "n": 540,
+      "wer": 0.520755545793982,
+      "exact": 182
+    },
+    "verbalize/all": {
+      "correct": 377,
+      "acceptable": 15,
+      "recoverable": 62,
+      "unrecoverable": 86,
+      "unjudged": 0,
+      "n": 540,
+      "wer": 0.2782780584230178,
+      "exact": 351
+    }
+  }
+}

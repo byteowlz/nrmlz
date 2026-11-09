@@ -1,0 +1,8 @@
+# Respellings for the Foxline bilingual Pocket TTS model (English sentences).
+# The model reads "Okay"/"OK" as "okah"; spelled letters "O K" were chosen by listening (2026-11-08).
+case_sensitive = false
+
+[terms]
+Okay = "O K"
+OK = "O K"
+"O.K." = "O K"

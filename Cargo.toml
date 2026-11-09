@@ -1,0 +1,34 @@
+[workspace]
+members = ["crates/nrmlz", "crates/nrmlz-cli", "crates/nrmlz-wasm", "tools/difftest"]
+default-members = ["crates/nrmlz", "crates/nrmlz-cli", "tools/difftest"]
+resolver = "2"
+
+[workspace.package]
+version = "0.2.4"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/byteowlz/nrmlz"
+rust-version = "1.88"
+
+[workspace.dependencies]
+nrmlz = { path = "crates/nrmlz", default-features = false }
+# Only the Unicode tables the patterns need (perl classes, case folding, word boundaries): smaller WebAssembly.
+fancy-regex = { version = "0.20.0", default-features = false, features = ["std", "perf"] }
+regex-syntax = { version = "0.8", default-features = false, features = ["std", "unicode-perl", "unicode-case"] }
+regex-automata = { version = "0.4", default-features = false, features = ["std", "unicode-perl", "unicode-case", "unicode-word-boundary"] }
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+# Size-optimised build for the WebAssembly package.
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"
+panic = "abort"
+strip = "debuginfo"

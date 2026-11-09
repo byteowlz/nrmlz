@@ -1,0 +1,8 @@
+# Respellings for the Foxline bilingual Pocket TTS model (German sentences).
+# The model reads "Okay"/"OK" as "okah"; "Okeh" was chosen by listening (2026-11-08).
+case_sensitive = false
+
+[terms]
+Okay = "Okeh"
+OK = "Okeh"
+"O.K." = "Okeh"

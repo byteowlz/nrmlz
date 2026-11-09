@@ -1,0 +1,25 @@
+# Copy to difftest.local.toml (ignored by git) and fill in local paths.
+# Interpreter of an environment with articulino-onnx 1.0.0 (german.py sha256 5b95a317...) and num2words 0.5.14.
+python = "/path/to/articulino/.venv/bin/python"
+
+# Extra corpora besides tests/corpus/*.jsonl. format: jsonl | json | lines.
+[[corpus]]
+name = "my-sentences"
+path = "/path/to/sentences-*.jsonl"   # a glob over file names is allowed
+format = "jsonl"
+field = "text"
+
+[[corpus]]
+name = "my-list"
+path = "/path/to/texts.json"
+format = "json"
+pointer = "/unused"                  # JSON pointer to an array of strings or objects
+
+# Quality evaluation (tools/qualeval): PolyNorm-Bench checkout (evaluation only, never committed),
+# optional other systems, and the judge model (an OpenAI-compatible provider from ~/.pi/agent/models.json).
+[qualeval]
+polynorm_dir = "/path/to/ml-speech-polynorm-bench"
+nemo_python = "/path/to/nemo-env/bin/python"
+verbalize = "/path/to/verbalize"
+judge_provider = "evaluation-provider"
+judge_model = "evaluation-model"

@@ -1,0 +1,185 @@
+# German gold set for the nrmlz profile: class<TAB>input<TAB>expected<TAB>justification.
+# Expected outputs are written by hand. Conventions: Amtliches Regelwerk 2024 (§ 36 (1.6): cardinals below a
+# million and all ordinals in one word); Duden usage for dates, money and units; phone and code digits one by one
+# with a pause between groups; inputs end with punctuation so no line-end period is added.
+# A class starting with "gap:" is a known gap: the expected output is correct, nrmlz does not produce it yet.
+cardinal	Auf dem Regal stehen 8 Krüge.	Auf dem Regal stehen acht Krüge.	plain cardinal
+cardinal	Die Bibliothek hat 617 Regale.	Die Bibliothek hat sechshundertsiebzehn Regale.	one word below a million
+cardinal	Es kamen 21 Gäste.	Es kamen einundzwanzig Gäste.	ein- before und
+cardinal	Die Stadt hat 1.234.567 Einwohner.	Die Stadt hat eine Million zweihundertvierunddreißigtausendfünfhundertsiebenundsechzig Einwohner.	Million is a separate noun
+cardinal	Es waren 2.000.000 Besucher.	Es waren zwei Millionen Besucher.	plural Millionen
+cardinal	Gestern waren es -8 Grad.	Gestern waren es minus acht Grad.	negative number
+cardinal	Er zählte bis 100.	Er zählte bis einhundert.	einhundert as num2words writes it
+cardinal	Die Nummer lautet 007.	Die Nummer lautet null null sieben.	leading zero: digit by digit
+cardinal	Sie hat 1 Bruder.	Sie hat einen Bruder.	bare 1 before a noun needs the noun's gender and case (einen Bruder); nrmlz still reads eins
+ordinal	Unsere Werkstatt ist im 6. Stock.	Unsere Werkstatt ist im sechsten Stock.	dative after im
+ordinal	Das ist die 100. Ausgabe.	Das ist die hundertste Ausgabe.	hundertste, not einhundertste
+ordinal	Paul ist der 8. in der Warteschlange.	Paul ist der achte in der Warteschlange.	nominative after der
+ordinal	Das ist mein 1. Besuch.	Das ist mein erster Besuch.	ein-word without ending, masculine noun: -er
+ordinal	Das war mein 2. Mal.	Das war mein zweites Mal.	ein-word, neuter noun: -es
+ordinal	Sie feierten seinen 40. Geburtstag.	Sie feierten seinen vierzigsten Geburtstag.	ein-word with ending: -en
+ordinal	Ein 3. Platz ist gut.	Ein dritter Platz ist gut.	reference wrote ein dritte
+ordinal	Am Ende der 3. Runde.	Am Ende der dritten Runde.	der + feminine noun is genitive/dative: -en
+ordinal	Dieser 3. Versuch klappte.	Dieser dritte Versuch klappte.	der-word nominative masculine
+ordinal	In diesem 4. Jahr.	In diesem vierten Jahr.	der-word dative
+ordinal	Das 22. Jahrhundert beginnt 2101.	Das zweiundzwanzigste Jahrhundert beginnt zweitausendeinhunderteins.	neuter nominative, year after 1999 as cardinal
+ordinal	Zum 50. Jubiläum kamen alle.	Zum fünfzigsten Jubiläum kamen alle.	zum: -en
+year	Geboren 1990 in Köln.	Geboren neunzehnhundertneunzig in Köln.	years 1100-1999 in hundreds
+year	Im Jahr 2026 kommt das.	Im Jahr zweitausendsechsundzwanzig kommt das.	from 2000 as cardinal
+year	Das war 1100 nach Christus.	Das war elfhundert nach Christus.	year reading
+decimal	Das kostet 3,5 kg Mehl.	Das kostet drei Komma fünf Kilogramm Mehl.	no pause comma in the nrmlz profile
+decimal	Die Lösung hat pH 7,4.	Die Lösung hat peh hah sieben Komma vier.	pH spelled, decimals digit by digit
+decimal	Es sind 0,25 Liter.	Es sind null Komma zwei fünf Liter.	decimals read digit by digit
+decimal	Die Strecke ist 42,195 km lang.	Die Strecke ist zweiundvierzig Komma eins neun fünf Kilometer lang.	decimals digit by digit
+fraction	Er aß 3/4 der Pizza.	Er aß drei Viertel der Pizza.	slash fraction
+fraction	Nimm 1/2 Liter Milch.	Nimm ein halb Liter Milch.	reference reading of 1/2
+fraction	¾ der Teilnehmer waren da.	drei Viertel der Teilnehmer waren da.	Unicode fraction
+fraction	Dazu 1½ kg Mehl.	Dazu eineinhalb Kilogramm Mehl.	whole number with ½
+fraction	Wir zeichnen eine ½ Note auf.	Wir zeichnen eine halbe Note auf.	½ after an article is the adjective halb
+fraction	Heute sind ⅔ der Schränke fertig.	Heute sind zwei Drittel der Schränke fertig.	Unicode fraction
+fraction	Der Dienst läuft 24/7.	Der Dienst läuft vierundzwanzig sieben.	24/7 is no fraction
+percent	Der Umsatz stieg um 12 %.	Der Umsatz stieg um zwölf Prozent.	percent with space
+percent	Es sind 3,5% Zinsen.	Es sind drei Komma fünf Prozent Zinsen.	percent without space
+percent	Der Wert liegt bei 2 ‰.	Der Wert liegt bei zwei Promille.	per mille
+money	Das Paket kostet 24,99 €.	Das Paket kostet vierundzwanzig Euro neunundneunzig.	euros and cents as spoken
+money	Das kostet 1,00 Euro.	Das kostet ein Euro.	ein Euro, cents 00 dropped
+money	Ein Los kostet $70 vor Ort.	Ein Los kostet siebzig Dollar vor Ort.	currency before number
+money	Er verdient 3.500 € brutto.	Er verdient dreitausendfünfhundert Euro brutto.	thousands point
+money	Der Gewinn lag bei 1,8 Mio. Euro.	Der Gewinn lag bei eins Komma acht Millionen Euro.	Mio. expanded
+money	Das Budget liegt bei 1.000.000 €.	Das Budget liegt bei einer Million Euro.	dative after bei
+money	Es kostet 3 Mrd. $.	Es kostet drei Milliarden Dollar.	currency symbol after a scale word
+money	Das Ticket kostet 5,50 Franken.	Das Ticket kostet fünf Franken fünfzig.	other currencies
+money	Der Preis ist 1.250,50 €.	Der Preis ist eintausendzweihundertfünfzig Euro fünfzig.	thousands point before decimal comma
+measure	Die neue Trasse ist 7 km lang.	Die neue Trasse ist sieben Kilometer lang.	unit after number
+measure	Das dauert 1 h.	Das dauert eine Stunde.	feminine unit, nominative
+measure	Wir sind in 1 h da.	Wir sind in einer Stunde da.	dative after in
+measure	Er fuhr mit 1 km/h.	Er fuhr mit einem Kilometer pro Stunde.	dative after mit, compound unit
+measure	Das Auto fährt 200 km/h.	Das Auto fährt zweihundert Kilometer pro Stunde.	compound unit
+measure	Die Wohnung hat 85 m².	Die Wohnung hat fünfundachtzig Quadratmeter.	unit with power after number
+measure	Der Preis pro m² steigt.	Der Preis pro Quadratmeter steigt.	unit with power without number
+measure	Die Dichte in kg/m³ ist hoch.	Die Dichte in Kilogramm pro Kubikmeter ist hoch.	compound unit without number
+measure	Die Miete beträgt 12 €/m².	Die Miete beträgt zwölf Euro pro Quadratmeter.	currency per area
+measure	Er ist 1,80 m groß.	Er ist ein Meter achtzig groß.	body height
+measure	Die Leitung hat 230 V.	Die Leitung hat zweihundertdreißig Volt.	unit needing space
+measure	Ein 4K-Monitor.	Ein vier K-Monitor.	4K is no Kelvin; a letter before a hyphen stays as written (U-Bahn, E-Mail)
+measure	Die Batterie hat 5000 mAh.	Die Batterie hat fünftausend Milliamperestunden.	compound unit
+measure	Der Akku lädt mit 9,81 m/s².	Der Akku lädt mit neun Komma acht eins Meter pro Quadratsekunde.	acceleration
+measure	Der Speicher hat 250 MB.	Der Speicher hat zweihundertfünfzig Megabyte.	data unit
+measure	Das Glas fasst 0,5 l.	Das Glas fasst null Komma fünf Liter.	liter
+temperature	Draußen sind 20 °C.	Draußen sind zwanzig Grad Celsius.	temperature
+temperature	Es hat -10 °C.	Es hat minus zehn Grad Celsius.	negative temperature
+time	Der Zug fährt um 14:30 Uhr.	Der Zug fährt um vierzehn Uhr dreißig.	time with Uhr
+time	Wir treffen uns um 9:05 Uhr.	Wir treffen uns um neun Uhr fünf.	minutes without zero
+time	Unser Empfang beginnt um 16:45.	Unser Empfang beginnt um sechzehn Uhr fünfundvierzig.	time without Uhr
+time	Es ist 1:00 Uhr nachts.	Es ist ein Uhr nachts.	ein Uhr
+time	Treffpunkt ist 8 Uhr.	Treffpunkt ist acht Uhr.	full hour
+time	Geöffnet von 10:00 bis 18:00 Uhr.	Geöffnet von zehn Uhr bis achtzehn Uhr.	time range
+duration	Das Ergebnis kam in 1:45 Stunden.	Das Ergebnis kam in einer Stunde und fünfundvierzig Minuten.	duration, not a clock time
+duration	Der Lauf dauerte 2:30 Stunden.	Der Lauf dauerte zwei Stunden und dreißig Minuten.	duration
+duration	Die Runde dauerte 1:20 min.	Die Runde dauerte eine Minute und zwanzig Sekunden.	minutes and seconds
+date	Der Termin ist am 14. März.	Der Termin ist am vierzehnten März.	dative after am
+date	Der 1. Mai ist frei.	Der erste Mai ist frei.	nominative after der
+date	Berlin, 25. Juli 2000.	Berlin, fünfundzwanzigster Juli zweitausend.	no article: -er
+date	Wir treffen uns am Freitag, 25. Juli.	Wir treffen uns am Freitag, fünfundzwanzigsten Juli.	apposition takes the case of am
+date	Am 3.10.2026 feiern wir.	Am dritten Oktober zweitausendsechsundzwanzig feiern wir.	numeric date
+date	Die Probe beginnt am 19.08.	Die Probe beginnt am neunzehnten August.	numeric date without year
+date	Die Karte gilt bis 24. Dez. 2027.	Die Karte gilt bis vierundzwanzigsten Dezember zweitausendsiebenundzwanzig.	abbreviated month
+date	Abgabe am 2023-11-30.	Abgabe am dreißigsten November zweitausenddreiundzwanzig.	ISO date
+date	Unser Hochzeitstag ist der 22/09/2028.	Unser Hochzeitstag ist der zweiundzwanzigste September zweitausendachtundzwanzig.	slash date, day-month-year
+date	Vom 10.–12. Mai ist geschlossen.	Vom zehnten bis zwölften Mai ist geschlossen.	date range
+date	Am dritten und 4. Mai ist frei.	Am dritten und vierten Mai ist frei.	enumeration takes the ending before
+measure	Das Rezept braucht 1 Prise Salz und 1 EL Öl.	Das Rezept braucht eine Prise Salz und einen Esslöffel Öl.	kitchen units (EL, TL, Prise) are not in the unit table; bare 1 before a noun
+range	Es kamen 10-15 Leute.	Es kamen zehn bis fünfzehn Leute.	range with hyphen
+range	Wir öffnen Mo–Fr.	Wir öffnen Montag bis Freitag.	weekday range
+range	Das kostet 8.000–12.000 Euro.	Das kostet achttausend bis zwölftausend Euro.	range with thousands
+range	Von 1990 – 2000 war das so.	Von neunzehnhundertneunzig bis zweitausend war das so.	year range
+score	Das Spiel endete 3:2.	Das Spiel endete drei zu zwei.	score
+score	Die Partie endete 24:18 (12:10).	Die Partie endete vierundzwanzig zu achtzehn (zwölf zu zehn).	score, not a clock time
+score	Das Verhältnis ist 1:3.	Das Verhältnis ist eins zu drei.	ratio
+phone	Ruf mich unter 0176 1234567 an.	Ruf mich unter null eins sieben sechs, eins zwei drei vier fünf sechs sieben an.	digit by digit, pause between groups
+phone	Die Nummer ist +49 170 1234567.	Die Nummer ist plus vier neun, eins sieben null, eins zwei drei vier fünf sechs sieben.	international prefix
+phone	Den Notruf 112 wählen.	Den Notruf eins eins zwei wählen.	emergency numbers are spoken digit by digit
+postcode	Die PLZ ist 90402.	Die Postleitzahl ist neun null vier null zwei.	postcode digit by digit
+postcode	Wir wohnen in 90402 Nürnberg.	Wir wohnen in neun null vier null zwei Nürnberg.	postcode before a city
+identifier	Die ISBN 978-3-16-148410-0 ist bekannt.	Die ih ess beh enn neun sieben acht, drei, eins sechs, eins vier acht vier eins null, null ist bekannt.	ISBN digit by digit, groups paused
+identifier	IBAN: DE00 0000 0000 0000 0000 00.	IBAN: deh eh null null, null null null null, null null null null, null null null null, null null null null, null null.	IBAN letters and digits one by one
+identifier	Die PIN lautet 2068.	Die PIN lautet zwei null sechs acht.	PIN digit by digit; PIN spoken as a word
+identifier	Bitte senden an Postfach 2056.	Bitte senden an Postfach zwei null fünf sechs.	Postfach digit by digit
+identifier	Die Tabelle zeigt 7-2-1.	Die Tabelle zeigt sieben, zwei, eins.	three numbers with hyphens are no range
+email	Schreib an max.mustermann@beispiel.de.	Schreib an max Punkt mustermann at beispiel Punkt deh eh.	e-mail, .de spelled
+email	Feedback an info@firma.com.	Feedback an info at firma Punkt komm.	.com read as a word
+url	Besuche www.uni-erlangen.de.	Besuche weh weh weh Punkt uni Strich erlangen Punkt deh eh.	web address
+url	Das Video ist auf https://youtu.be/abc.	Das Video ist auf youtu Punkt beh eh Schrägstrich abc.	unknown ending with a scheme
+url	Siehe https://example.org/docs/start.	Siehe example Punkt org Schrägstrich docs Schrägstrich start.	path
+hashtag	Heute schreiben wir über #Holzbau.	Heute schreiben wir über Hashtag Holzbau.	hashtag
+hashtag	Du erreichst @beispielkonto direkt.	Du erreichst at beispielkonto direkt.	mention
+abbreviation	Zum Beispiel z. B. und z.B.	Zum Beispiel zum Beispiel und zum Beispiel.	with and without space
+abbreviation	Dr. Beispiel leitet die Runde.	Doktor Beispiel leitet die Runde.	title
+abbreviation	Die ca. 100 Gäste kamen.	Die circa einhundert Gäste kamen.	ca.
+abbreviation	Im 3. Jh. v. Chr. Er zeigte etwas.	Im dritten Jahrhundert vor Christus. Er zeigte etwas.	period kept before a new sentence
+abbreviation	In Abb. 8 steht das Ergebnis.	In Abbildung acht steht das Ergebnis.	Abb.
+abbreviation	Siehe S. 12 und Abs. 1.	Siehe Seite zwölf und Absatz eins.	S. and Abs. before a number
+abbreviation	Wir lesen Art. 7 GG.	Wir lesen Artikel sieben geh geh.	Art. before a number, GG spelled
+abbreviation	Fr. Müller kommt am Fr., 3. Mai.	Frau Müller kommt am Freitag, dritten Mai.	Fr. before a name is Frau, else Freitag
+abbreviation	Die Glocken von St. Martin läuten.	Die Glocken von Sankt Martin läuten.	St. before a name
+abbreviation	Wir treffen uns am Hbf.	Wir treffen uns am Hauptbahnhof.	Hbf.
+abbreviation	Die Firma XY GmbH zahlt.	Die Firma iks üpsilon geh emm beh hah zahlt.	GmbH as letters
+abbreviation	Er kommt ggf. später, usw.	Er kommt gegebenenfalls später, und so weiter.	ggf., usw.
+abbreviation	Die Kfz-Steuer steigt.	Die kah eff zett-Steuer steigt.	Kfz in mixed case spelled
+initialism	Die Datei liegt als PDF vor.	Die Datei liegt als peh deh eff vor.	initialism spelled
+initialism	Wir telefonieren mit den USA.	Wir telefonieren mit den uh ess ah.	always spelled
+initialism	Der ADAC hilft.	Der ah deh ah zeh hilft.	always spelled despite vowels
+initialism	Die KI liest mit.	Die kah ih liest mit.	short initialism spelled
+acronym	Die NASA startet.	Die NASA startet.	acronym word kept as written (no respelling)
+acronym	Der TÜV prüft.	Der TÜV prüft.	acronym word kept as written
+acronym	Alles OK.	Alles OK.	kept as written, not spelled
+acronym	Die UNESCO schützt das Denkmal.	Die UNESCO schützt das Denkmal.	4+ letters with vowels: a word
+shouting	BITTE SOFORT MELDEN.	BITTE SOFORT MELDEN.	words in capitals stay
+shouting	DAS IST GUT.	DAS IST GUT.	short words in capitals stay
+roman	Kapitel VII beginnt hier.	Kapitel sieben beginnt hier.	Roman numeral after a keyword
+roman	König Ludwig XIV. war mächtig.	König Ludwig der Vierzehnte war mächtig.	regnal number
+roman	Königin Elisabeth II. starb 2022.	Königin Elisabeth die Zweite starb zweitausendzweiundzwanzig.	female regnal number
+roman	Wir prüfen § 123 II BGB.	Wir prüfen Paragraf einhundertdreiundzwanzig Absatz zwei beh geh beh.	paragraph subsection
+roman	Der Super Bowl LVII war spannend.	Der Super Bowl siebenundfünfzig war spannend.	keyword Bowl
+math	5 + 3 = 8.	fünf plus drei gleich acht.	arithmetic
+math	10 – 4 = 6.	zehn minus vier gleich sechs.	dash in a calculation is minus
+math	Was ergibt 10 - 4?	Was ergibt zehn minus vier?	question form
+math	E = mc².	eh gleich emm zeh hoch zwei.	variables spelled, power
+math	Die Zahl 2^10 ist groß.	Die Zahl zwei hoch zehn ist groß.	caret power
+math	Es gilt 3 < 5 und 3<5.	Es gilt drei kleiner als fünf und drei kleiner als fünf.	comparison with and without spaces
+math	π ist ungefähr 3,14.	Pi ist ungefähr drei Komma eins vier.	pi
+math	√2 ist irrational.	Wurzel aus zwei ist irrational.	root sign
+math	Nimm es 2x täglich.	Nimm es zweimal täglich.	multiplicative
+math	Ein Raum von 2 x 3 m.	Ein Raum von zwei mal drei Meter.	dimensions
+latex	Die Formel $a^2 + b^2 = c^2$ gilt.	Die Formel ah hoch zwei plus beh hoch zwei gleich zeh hoch zwei gilt.	inline LaTeX
+latex	Die Lösung ist \frac{1}{2}.	Die Lösung ist eins durch zwei.	LaTeX without $
+latex	Es gilt $\sqrt{x}$.	Es gilt Wurzel aus iks.	square root
+markup	**Wichtig:** Bitte lesen.	Wichtig: Bitte lesen.	emphasis removed
+markup	# Überschrift	Überschrift.	heading becomes a sentence
+markup	- erster Punkt	erster Punkt.	bullet removed
+markup	1. Erstens das	Erstens das.	list number not doubled
+markup	2. Zweiter Punkt	Zweitens, Zweiter Punkt.	list number as enumeration word
+markup	Siehe [die Doku](https://example.com).	Siehe die Doku.	link text only
+markup	Text mit `code` hier.	Text mit code hier.	backticks removed
+emoji	Das ist super 😂 toll.	Das ist super toll.	emoji removed
+emoji	Es wird regnen :) Nimm einen Schirm.	Es wird regnen, Nimm einen Schirm.	smiley as a pause
+emoji	Berlin → Hauptstadt.	Berlin, Hauptstadt.	arrow as a pause
+coordinates	Berlin liegt bei 52.52° N, 13.40° E.	Berlin liegt bei zweiundfünfzig Komma fünf zwei Grad Nord, dreizehn Komma vier null Grad Ost.	coordinates
+version	Unser Treiber v8.4.2 wird geladen.	Unser Treiber Version acht Punkt vier Punkt zwei wird geladen.	version prefix
+version	Die Anwendung nutzt Python 3.13.2.	Die Anwendung nutzt Python drei Punkt dreizehn Punkt zwei.	dotted version
+version	Die IP ist 192.168.0.1.	Die ih peh ist einhundertzweiundneunzig Punkt einhundertachtundsechzig Punkt null Punkt eins.	IP address
+decade	In den 70ern war das anders.	In den Siebzigern war das anders.	decade noun
+decade	Die 90er Jahre waren bunt.	Die neunziger Jahre waren bunt.	decade adjective
+decade	Ein 3er-Pack kostet mehr.	Ein Dreier-Pack kostet mehr.	number noun in a compound
+symbols	Tom & Jerry.	Tom und Jerry.	ampersand
+symbols	Siehe § 5.	Siehe Paragraf fünf.	paragraph sign
+symbols	Der Wert ist ±3.	Der Wert ist plus minus drei.	plus-minus
+symbols	Rolls-Royce/Snecma liefert.	Rolls-Royce Snecma liefert.	slash between words
+symbols	Werte wie 7µF sind klein.	Werte wie sieben Mikrofarad sind klein.	no digits left
+symbols	Die Vorwahl +49.	Die Vorwahl plus neunundvierzig.	plus sign before a number
+mixed	Am 14. März um 15:30 Uhr kostet es 24,99 € (ca. 3,5 kg, z. B. als PDF).	Am vierzehnten März um fünfzehn Uhr dreißig kostet es vierundzwanzig Euro neunundneunzig (circa drei Komma fünf Kilogramm, zum Beispiel als peh deh eff).	everything at once
+mixed	Laut Bericht stieg der Umsatz 2025 um 12 % auf 1,8 Mio. Euro.	Laut Bericht stieg der Umsatz zweitausendfünfundzwanzig um zwölf Prozent auf eins Komma acht Millionen Euro.	owner's number sentence
+mixed	Der Zug fährt um 7:45 Uhr von Gleis 3 ab, z. B. nach München.	Der Zug fährt um sieben Uhr fünfundvierzig von Gleis drei ab, zum Beispiel nach München.	owner's number sentence
+mixed	Die Datei liegt als PDF auf dem Server, ca. 250 MB groß.	Die Datei liegt als peh deh eff auf dem Server, circa zweihundertfünfzig Megabyte groß.	owner's number sentence
+code-switching	Hier [en]5 books and $2.50[/en], nicht 3 Bücher.	Hier [en]five books and two dollars and fifty cents[/en], nicht drei Bücher.	explicit English numbers/currency, tags retained for downstream routing
+code-switching	Ein [EN]12 cats[/EN] sind da.	Ein [en]twelve cats[/en] sind da.	case-insensitive tag convention, canonical lower-case tags

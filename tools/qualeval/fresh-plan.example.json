@@ -1,0 +1,13 @@
+{
+  "schema": "nrmlz.fresh-plan.v1",
+  "purpose": "text-normalization-evaluation",
+  "families": {
+    "independent-family-development": "development",
+    "independent-family-selection": "selection",
+    "independent-family-reserved": "holdout"
+  },
+  "policy": {
+    "primary": "verified-semantic-errors",
+    "promotion": "manual-after-human-and-audio-validation"
+  }
+}

@@ -1,0 +1,15 @@
+[package]
+name = "nrmlz-wasm"
+description = "WebAssembly bindings of nrmlz (wasm-bindgen)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+nrmlz = { workspace = true, features = ["lexicon-json"] }
+wasm-bindgen = "=0.2.130"

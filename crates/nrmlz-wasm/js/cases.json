@@ -1,0 +1,26 @@
+[
+ {
+  "text": "Der Termin ist am 14. März um 15:30 Uhr.",
+  "expected": "Der Termin ist am vierzehnten März um fünfzehn Uhr dreißig."
+ },
+ {
+  "text": "Das Paket kostet 24,99 € und wiegt 3,5 kg.",
+  "expected": "Das Paket kostet vierundzwanzig Euro neunundneunzig und wiegt drei Komma, fünf Kilogramm."
+ },
+ {
+  "text": "Bitte ruf mich unter 0176 1234567 zurück.",
+  "expected": "Bitte ruf mich unter null eins sieben sechs, eins zwei drei vier fünf sechs sieben zurück."
+ },
+ {
+  "text": "Laut Bericht stieg der Umsatz 2025 um 12 % auf 1,8 Mio. Euro.",
+  "expected": "Laut Bericht stieg der Umsatz zweitausendfünfundzwanzig um zwölf Prozent auf eins Komma, acht Millionen Euro."
+ },
+ {
+  "text": "Die Datei liegt als PDF auf dem Server, ca. 250 MB groß.",
+  "expected": "Die Datei liegt als peh deh eff auf dem Server, circa zweihundertfünfzig Megabyte groß."
+ },
+ {
+  "text": "Der Zug fährt um 7:45 Uhr von Gleis 3 ab, z. B. nach München.",
+  "expected": "Der Zug fährt um sieben Uhr fünfundvierzig von Gleis drei ab, zum Beispiel nach München."
+ }
+]

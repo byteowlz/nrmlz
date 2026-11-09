@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/byteowlz/nrmlz/main/crates/nrmlz-cli/config.schema.json",
+  "title": "nrmlz config",
+  "description": "Settings of the nrmlz command line ($XDG_CONFIG_HOME/nrmlz/config.toml or ./nrmlz.toml).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lexicon": {
+      "type": "string",
+      "description": "Lexicon file (.toml, .json or .tsv) with terms to replace. Empty: no lexicon.",
+      "default": ""
+    },
+    "profile": {
+      "type": "string",
+      "description": "nrmlz (default, all fixes) or reference (exactly the Articulino frontend); +fix/-fix terms allowed, e.g. reference+plain-decimal.",
+      "default": "nrmlz"
+    },
+    "decimal_pause": {
+      "type": "boolean",
+      "description": "Pause comma after Komma (drei Komma, fünf), for models trained on the Articulino frontend.",
+      "default": false
+    },
+    "respellings": {
+      "type": "boolean",
+      "description": "Apply the respelling entries of the abbreviation table (Homebrew -> Hohmbruh, OK -> okeh).",
+      "default": false
+    },
+    "lexicon_stage": {
+      "type": "string",
+      "enum": ["before", "after"],
+      "description": "Apply the lexicon before normalisation (raw text) or after it (spoken form). A stage in the lexicon file wins.",
+      "default": "before"
+    }
+  }
+}

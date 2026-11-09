@@ -1,0 +1,35 @@
+nrmlz
+Copyright 2026 byteowlz
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+---------------------------------------------------------------------------
+German frontend
+---------------------------------------------------------------------------
+The German rules (crates/nrmlz/src/de/) are a Rust translation of the German
+text frontend of Articulino-DE-EN-Realtime-Stream-TTS:
+
+  Articulino-DE-EN-Realtime-Stream-TTS
+  Copyright 2026 eigenhand
+  Licensed under the Apache License, Version 2.0.
+  https://huggingface.co/eigenhand/Articulino-DE-EN-Realtime-Stream-TTS-ONNX
+  https://github.com/eigenhand/articulino-onnx
+
+Pinned upstream revision: Hugging Face a760ce8d513534111c7679751869fa4c45ef0e54
+(articulino-onnx 1.0.0), file articulino_onnx/frontend/german.py,
+sha256 5b95a317521bfdf865c580bc85f20b7ecf4ac07381c6e9f1040ba6e51da100f5.
+
+Changes: the Python code was translated to Rust (modified files, see the
+header of each module). The data tables crates/nrmlz/data/de/abbreviations.json
+(sha256 289b5b80ebcf7cf18839f32fbf9421beb7ee90908ee1c272ad0bd7f4acc8b0ac) and
+crates/nrmlz/data/de/units.json
+(sha256 45b4300f16607ab6c960adad29bc86295d306fab891e9fadeaa41efc441d79c4)
+are copied unchanged. The training-data attributions in the upstream NOTICE
+concern the model weights, which nrmlz does not contain.
+
+---------------------------------------------------------------------------
+Number words
+---------------------------------------------------------------------------
+The German number words reproduce the output of num2words 0.5.14 (LGPL-2.1),
+which the upstream frontend calls. nrmlz contains no num2words code: the
+spelling is implemented independently and checked against the library's output.

@@ -1,0 +1,273 @@
+# class<TAB>input<TAB>expected<TAB>rationale
+# Independently hand-written examples and expectations; no external benchmark examples.
+# A fixed synthetic carrier is prepended to inputs and expectations to avoid trivial standalone-token collisions.
+cardinal	Zorvella's synthetic ledger reads: 0	Zorvella's synthetic ledger reads: zero	Zero is a word, not an empty group.
+cardinal	Zorvella's synthetic ledger reads: 7	Zorvella's synthetic ledger reads: seven	Single-digit cardinal.
+cardinal	Zorvella's synthetic ledger reads: 19	Zorvella's synthetic ledger reads: nineteen	Irregular teen.
+cardinal	Zorvella's synthetic ledger reads: 21	Zorvella's synthetic ledger reads: twenty-one	US compound tens use a hyphen.
+cardinal	Zorvella's synthetic ledger reads: 40	Zorvella's synthetic ledger reads: forty	Standard spelling without a u.
+cardinal	Zorvella's synthetic ledger reads: 100	Zorvella's synthetic ledger reads: one hundred	Exact hundred keeps one.
+cardinal	Zorvella's synthetic ledger reads: 105	Zorvella's synthetic ledger reads: one hundred five	US reading omits British and.
+cardinal	Zorvella's synthetic ledger reads: 1,234	Zorvella's synthetic ledger reads: one thousand two hundred thirty-four	Comma grouping is not a decimal separator.
+cardinal	Zorvella's synthetic ledger reads: 1000001	Zorvella's synthetic ledger reads: one million one	Empty thousands group is skipped.
+cardinal	Zorvella's synthetic ledger reads: 2500000000	Zorvella's synthetic ledger reads: two billion five hundred million	Short-scale billion.
+cardinal	Zorvella's synthetic ledger reads: 0012	Zorvella's synthetic ledger reads: twelve	Leading zeros on a bare integer do not make a phone.
+cardinal	Zorvella's synthetic ledger reads: I have 3 books.	Zorvella's synthetic ledger reads: I have three books.	Sentence punctuation survives.
+cardinal	Zorvella's synthetic ledger reads: 1.8 million	Zorvella's synthetic ledger reads: one point eight million	Never delete an existing scale word.
+cardinal	Zorvella's synthetic ledger reads: 2 hundred	Zorvella's synthetic ledger reads: two hundred	Existing hundred is preserved, not deleted.
+ordinal	Zorvella's synthetic ledger reads: 1st	Zorvella's synthetic ledger reads: first	Irregular first.
+ordinal	Zorvella's synthetic ledger reads: 2nd	Zorvella's synthetic ledger reads: second	Irregular second.
+ordinal	Zorvella's synthetic ledger reads: 3rd	Zorvella's synthetic ledger reads: third	Irregular third.
+ordinal	Zorvella's synthetic ledger reads: 5th	Zorvella's synthetic ledger reads: fifth	Irregular fifth.
+ordinal	Zorvella's synthetic ledger reads: 8th	Zorvella's synthetic ledger reads: eighth	Irregular eighth.
+ordinal	Zorvella's synthetic ledger reads: 9th	Zorvella's synthetic ledger reads: ninth	Irregular ninth.
+ordinal	Zorvella's synthetic ledger reads: 12th	Zorvella's synthetic ledger reads: twelfth	Irregular twelfth.
+ordinal	Zorvella's synthetic ledger reads: 21st	Zorvella's synthetic ledger reads: twenty-first	Ordinal changes only final component.
+ordinal	Zorvella's synthetic ledger reads: 40th	Zorvella's synthetic ledger reads: fortieth	Final y becomes ieth.
+ordinal	Zorvella's synthetic ledger reads: 112th	Zorvella's synthetic ledger reads: one hundred twelfth	Teen exception overrides final digit.
+ordinal	Zorvella's synthetic ledger reads: 1000th	Zorvella's synthetic ledger reads: one thousandth	Scale ordinals.
+ordinal	Zorvella's synthetic ledger reads: 11st	Zorvella's synthetic ledger reads: 11st	Malformed suffix is not silently corrected.
+decimal	Zorvella's synthetic ledger reads: 3.14	Zorvella's synthetic ledger reads: three point one four	Fractional digits are spoken individually.
+decimal	Zorvella's synthetic ledger reads: 0.005	Zorvella's synthetic ledger reads: zero point zero zero five	Leading fractional zeros matter.
+decimal	Zorvella's synthetic ledger reads: .5	Zorvella's synthetic ledger reads: zero point five	Leading decimal point has implicit zero.
+decimal	Zorvella's synthetic ledger reads: -0.25	Zorvella's synthetic ledger reads: minus zero point two five	Signed decimal.
+decimal	Zorvella's synthetic ledger reads: +12	Zorvella's synthetic ledger reads: plus twelve	Explicit positive sign.
+decimal	Zorvella's synthetic ledger reads: 1,234.50	Zorvella's synthetic ledger reads: one thousand two hundred thirty-four point five zero	Grouping and fractional trailing zero.
+year	Zorvella's synthetic ledger reads: in 1996	Zorvella's synthetic ledger reads: in nineteen ninety-six	Explicit year context.
+year	Zorvella's synthetic ledger reads: born 1904	Zorvella's synthetic ledger reads: born nineteen oh four	Low year pair uses oh.
+year	Zorvella's synthetic ledger reads: since 1900	Zorvella's synthetic ledger reads: since nineteen hundred	Exact century.
+year	Zorvella's synthetic ledger reads: in 2000	Zorvella's synthetic ledger reads: in two thousand	Millennial year.
+year	Zorvella's synthetic ledger reads: in 2008	Zorvella's synthetic ledger reads: in two thousand eight	Early two-thousands convention.
+year	Zorvella's synthetic ledger reads: in 2027	Zorvella's synthetic ledger reads: in twenty twenty-seven	Modern paired year.
+year	Zorvella's synthetic ledger reads: 1996 books	Zorvella's synthetic ledger reads: one thousand nine hundred ninety-six books	No year guess for a bare count.
+year	Zorvella's synthetic ledger reads: 2008 years	Zorvella's synthetic ledger reads: two thousand eight years	Duration is not a year cue.
+money	Zorvella's synthetic ledger reads: $5.50	Zorvella's synthetic ledger reads: five dollars and fifty cents	Exact minor units.
+money	Zorvella's synthetic ledger reads: $1234	Zorvella's synthetic ledger reads: one thousand two hundred thirty-four dollars	Do not truncate ungrouped four-digit amount.
+money	Zorvella's synthetic ledger reads: $1.5	Zorvella's synthetic ledger reads: one dollar and fifty cents	One decimal digit denotes tenths of a major unit.
+money	Zorvella's synthetic ledger reads: $0.01	Zorvella's synthetic ledger reads: one cent	Sub-dollar amount omits zero dollars.
+money	Zorvella's synthetic ledger reads: $0.50	Zorvella's synthetic ledger reads: fifty cents	Sub-dollar plural.
+money	Zorvella's synthetic ledger reads: $0.00	Zorvella's synthetic ledger reads: zero dollars	Zero whole currency.
+money	Zorvella's synthetic ledger reads: $1.00	Zorvella's synthetic ledger reads: one dollar	Whole-unit singular with zero cents.
+money	Zorvella's synthetic ledger reads: €2.01	Zorvella's synthetic ledger reads: two euros and one cent	Euro minor-unit singular.
+money	Zorvella's synthetic ledger reads: 1 EUR	Zorvella's synthetic ledger reads: one euro	Currency code after amount.
+money	Zorvella's synthetic ledger reads: EUR 2.50	Zorvella's synthetic ledger reads: two euros and fifty cents	Currency code before amount.
+money	Zorvella's synthetic ledger reads: £1.01	Zorvella's synthetic ledger reads: one pound and one penny	GBP singular minor unit is penny.
+money	Zorvella's synthetic ledger reads: GBP 3.02	Zorvella's synthetic ledger reads: three pounds and two pence	GBP plural minor unit is pence.
+money	Zorvella's synthetic ledger reads: -$5	Zorvella's synthetic ledger reads: minus five dollars	Sign before symbol.
+money	Zorvella's synthetic ledger reads: $-5	Zorvella's synthetic ledger reads: minus five dollars	Sign after symbol.
+money	Zorvella's synthetic ledger reads: $1.5 million	Zorvella's synthetic ledger reads: one point five million dollars	A scale multiplies the entire decimal amount.
+money	Zorvella's synthetic ledger reads: 2 billion USD	Zorvella's synthetic ledger reads: two billion dollars	Scale names never become billions here.
+money	Zorvella's synthetic ledger reads: $1.234	Zorvella's synthetic ledger reads: $1.234	Unsupported minor precision is preserved, not rounded or partially consumed.
+money	Zorvella's synthetic ledger reads: It costs $5.50.	Zorvella's synthetic ledger reads: It costs five dollars and fifty cents.	Token recognition preserves surrounding whitespace.
+money	Zorvella's synthetic ledger reads: ¥1500	Zorvella's synthetic ledger reads: one thousand five hundred yen	Bare yen symbol defaults to JPY and yen is invariant.
+money	Zorvella's synthetic ledger reads: JPY 1	Zorvella's synthetic ledger reads: one yen	Yen singular also invariant.
+money	Zorvella's synthetic ledger reads: JPY 1.25	Zorvella's synthetic ledger reads: one point two five yen	Modern yen decimal is not fictitious sen.
+money	Zorvella's synthetic ledger reads: CNY 8.05	Zorvella's synthetic ledger reads: eight yuan and five fen	Yuan and fen invariant in this English convention.
+money	Zorvella's synthetic ledger reads: CN¥20	Zorvella's synthetic ledger reads: twenty yuan	Qualified yuan symbol disambiguates yen.
+money	Zorvella's synthetic ledger reads: C$4.10	Zorvella's synthetic ledger reads: four Canadian dollars and ten cents	Qualified dollar symbol.
+money	Zorvella's synthetic ledger reads: AUD 2	Zorvella's synthetic ledger reads: two Australian dollars	Australian currency code.
+money	Zorvella's synthetic ledger reads: NZ$1	Zorvella's synthetic ledger reads: one New Zealand dollar	New Zealand singular.
+money	Zorvella's synthetic ledger reads: CHF 3.20	Zorvella's synthetic ledger reads: three Swiss francs and twenty centimes	Swiss currency naming.
+money	Zorvella's synthetic ledger reads: ₹5.01	Zorvella's synthetic ledger reads: five rupees and one paisa	Indian minor-unit singular.
+money	Zorvella's synthetic ledger reads: INR 2.02	Zorvella's synthetic ledger reads: two rupees and two paise	Indian minor-unit plural.
+money	Zorvella's synthetic ledger reads: ₩300	Zorvella's synthetic ledger reads: three hundred won	Won is invariant.
+money	Zorvella's synthetic ledger reads: ₽7.50	Zorvella's synthetic ledger reads: seven rubles and fifty kopeks	Ruble symbol and minor units.
+money	Zorvella's synthetic ledger reads: R$2.25	Zorvella's synthetic ledger reads: two Brazilian reals and twenty-five centavos	Qualified real symbol.
+money	Zorvella's synthetic ledger reads: MXN 1	Zorvella's synthetic ledger reads: one Mexican peso	Peso code is not treated as USD.
+money	Zorvella's synthetic ledger reads: SEK 2	Zorvella's synthetic ledger reads: two Swedish kronor	Irregular krona plural.
+money	Zorvella's synthetic ledger reads: NOK 1.50	Zorvella's synthetic ledger reads: one Norwegian krone and fifty øre	Real minor-unit name is not a respelling.
+money	Zorvella's synthetic ledger reads: DKK 3	Zorvella's synthetic ledger reads: three Danish kroner	Danish plural.
+money	Zorvella's synthetic ledger reads: PLN 2	Zorvella's synthetic ledger reads: two Polish zlotys	Polish code.
+money	Zorvella's synthetic ledger reads: TRY 3	Zorvella's synthetic ledger reads: three Turkish lira	Lira invariant convention.
+money	Zorvella's synthetic ledger reads: ZAR 5	Zorvella's synthetic ledger reads: five rand	Rand invariant convention.
+money	Zorvella's synthetic ledger reads: S$2	Zorvella's synthetic ledger reads: two Singapore dollars	Singapore qualified symbol.
+money	Zorvella's synthetic ledger reads: HK$1	Zorvella's synthetic ledger reads: one Hong Kong dollar	Hong Kong singular.
+money	Zorvella's synthetic ledger reads: AED 2.01	Zorvella's synthetic ledger reads: two dirhams and one fils	Fils is also the singular minor-unit name.
+money	Zorvella's synthetic ledger reads: SAR 3.50	Zorvella's synthetic ledger reads: three riyals and fifty halalas	Riyal minor plural.
+percent	Zorvella's synthetic ledger reads: 12%	Zorvella's synthetic ledger reads: twelve percent	Percentage suffix.
+percent	Zorvella's synthetic ledger reads: 0.5%	Zorvella's synthetic ledger reads: zero point five percent	Fractional percentage is not money.
+percent	Zorvella's synthetic ledger reads: -2.5%	Zorvella's synthetic ledger reads: minus two point five percent	Negative percentage.
+percent	Zorvella's synthetic ledger reads: 3‰	Zorvella's synthetic ledger reads: three per mille	Per-mille symbol.
+clock	Zorvella's synthetic ledger reads: 3:30 p.m.	Zorvella's synthetic ledger reads: three thirty P M.	Minutes are cardinal, not three zero.
+clock	Zorvella's synthetic ledger reads: 9:05 AM	Zorvella's synthetic ledger reads: nine oh five A M	Low minutes use oh.
+clock	Zorvella's synthetic ledger reads: 12:00 a.m.	Zorvella's synthetic ledger reads: twelve o'clock A M.	Twelve-hour midnight keeps twelve.
+clock	Zorvella's synthetic ledger reads: 12:00 PM	Zorvella's synthetic ledger reads: twelve o'clock P M	Twelve-hour noon.
+clock	Zorvella's synthetic ledger reads: 00:05	Zorvella's synthetic ledger reads: zero oh five	Unmarked clock retains 24-hour hour.
+clock	Zorvella's synthetic ledger reads: 13:45	Zorvella's synthetic ledger reads: thirteen forty-five	Unmarked 24-hour clock must not subtract twelve.
+clock	Zorvella's synthetic ledger reads: 23:59	Zorvella's synthetic ledger reads: twenty-three fifty-nine	Last valid 24-hour minute.
+clock	Zorvella's synthetic ledger reads: 08:00	Zorvella's synthetic ledger reads: eight o'clock	Leading hour zero is not spoken.
+clock	Zorvella's synthetic ledger reads: 3 pm	Zorvella's synthetic ledger reads: three P M	Hour-only meridiem.
+clock	Zorvella's synthetic ledger reads: 3:02:01 PM	Zorvella's synthetic ledger reads: three oh two and one second P M	Seconds use correct singular.
+clock	Zorvella's synthetic ledger reads: 25:10	Zorvella's synthetic ledger reads: 25:10	Invalid hour stays intact.
+clock	Zorvella's synthetic ledger reads: 12:65	Zorvella's synthetic ledger reads: 12:65	Invalid minute stays intact.
+clock	Zorvella's synthetic ledger reads: 0:30 PM	Zorvella's synthetic ledger reads: 0:30 PM	Zero is not a valid meridiem hour.
+date	Zorvella's synthetic ledger reads: 2024-02-29	Zorvella's synthetic ledger reads: February twenty-ninth, twenty twenty-four	Gregorian leap day.
+date	Zorvella's synthetic ledger reads: 2023-02-29	Zorvella's synthetic ledger reads: 2023-02-29	Reject a non-leap day without rewriting components.
+date	Zorvella's synthetic ledger reads: 1900-02-29	Zorvella's synthetic ledger reads: 1900-02-29	Century not divisible by four hundred is not leap.
+date	Zorvella's synthetic ledger reads: 2000-02-29	Zorvella's synthetic ledger reads: February twenty-ninth, two thousand	Four-hundred-year leap rule.
+date	Zorvella's synthetic ledger reads: 2026-04-31	Zorvella's synthetic ledger reads: 2026-04-31	April has thirty days.
+date	Zorvella's synthetic ledger reads: March 14, 2026	Zorvella's synthetic ledger reads: March fourteenth, twenty twenty-six	Named US date.
+date	Zorvella's synthetic ledger reads: Jan. 1, 2005	Zorvella's synthetic ledger reads: January first, two thousand five	Abbreviated named date.
+date	Zorvella's synthetic ledger reads: 14 March 2026	Zorvella's synthetic ledger reads: March fourteenth, twenty twenty-six	Named day-first date is unambiguous.
+date	Zorvella's synthetic ledger reads: 2nd of May	Zorvella's synthetic ledger reads: May second	Named date without a year.
+date	Zorvella's synthetic ledger reads: 02/14/2026	Zorvella's synthetic ledger reads: February fourteenth, twenty twenty-six	Slash date with four-digit year uses documented US order.
+date	Zorvella's synthetic ledger reads: 03/04/2026	Zorvella's synthetic ledger reads: March fourth, twenty twenty-six	US policy is explicit even where another locale would differ.
+date	Zorvella's synthetic ledger reads: 7/19	Zorvella's synthetic ledger reads: July nineteenth	No-year month/day with day above twelve is unambiguous.
+date	Zorvella's synthetic ledger reads: 3/4	Zorvella's synthetic ledger reads: 3/4	Ambiguous slash expression stays intact.
+date	Zorvella's synthetic ledger reads: 3/4/26	Zorvella's synthetic ledger reads: 3/4/26	No century pivot for a two-digit year.
+date	Zorvella's synthetic ledger reads: 13/4/2026	Zorvella's synthetic ledger reads: 13/4/2026	Do not silently switch numeric locale to day/month.
+unit	Zorvella's synthetic ledger reads: 5 km	Zorvella's synthetic ledger reads: five kilometers	Plural length unit.
+unit	Zorvella's synthetic ledger reads: 1 km	Zorvella's synthetic ledger reads: one kilometer	Singular length unit.
+unit	Zorvella's synthetic ledger reads: 1.0 kg	Zorvella's synthetic ledger reads: one point zero kilogram	Numeric one with decimal zero takes singular.
+unit	Zorvella's synthetic ledger reads: -1 kg	Zorvella's synthetic ledger reads: minus one kilogram	Absolute one takes singular.
+unit	Zorvella's synthetic ledger reads: 2.5kg	Zorvella's synthetic ledger reads: two point five kilograms	Unambiguous symbol may attach directly.
+unit	Zorvella's synthetic ledger reads: 5 µm	Zorvella's synthetic ledger reads: five micrometers	Micro sign remains Unicode safe.
+unit	Zorvella's synthetic ledger reads: 5 μg	Zorvella's synthetic ledger reads: five micrograms	Greek mu is accepted separately.
+unit	Zorvella's synthetic ledger reads: 20 °C	Zorvella's synthetic ledger reads: twenty degrees Celsius	Temperature symbol is a unit, not an acronym.
+unit	Zorvella's synthetic ledger reads: 1 °F	Zorvella's synthetic ledger reads: one degree Fahrenheit	Singular temperature.
+unit	Zorvella's synthetic ledger reads: 60 km/h	Zorvella's synthetic ledger reads: sixty kilometers per hour	Rate denominator remains singular.
+unit	Zorvella's synthetic ledger reads: 2 kg/s	Zorvella's synthetic ledger reads: two kilograms per second	Composed denominator remains singular.
+unit	Zorvella's synthetic ledger reads: 4 m²	Zorvella's synthetic ledger reads: four square meters	Unicode square symbol.
+unit	Zorvella's synthetic ledger reads: 8 GB	Zorvella's synthetic ledger reads: eight gigabytes	Case-sensitive data size symbol.
+unit	Zorvella's synthetic ledger reads: 2 MB/s	Zorvella's synthetic ledger reads: two megabytes per second	Composed data rate.
+unit	Zorvella's synthetic ledger reads: 5-10 kg	Zorvella's synthetic ledger reads: five to ten kilograms	Recognize unit range before a trailing unit locks the second endpoint.
+phone	Zorvella's synthetic ledger reads: (212) 555-0187	Zorvella's synthetic ledger reads: two one two, five five five, zero one eight seven	North American groups are digits.
+phone	Zorvella's synthetic ledger reads: 415-555-0123	Zorvella's synthetic ledger reads: four one five, five five five, zero one two three	Separated North American telephone.
+phone	Zorvella's synthetic ledger reads: +1 212 555 0187	Zorvella's synthetic ledger reads: one, two one two, five five five, zero one eight seven	Country prefix is not discarded.
+phone	Zorvella's synthetic ledger reads: +442079460958	Zorvella's synthetic ledger reads: plus four four two zero seven nine four six zero nine five eight	Compact international telephone preserves every digit.
+abbreviation	Zorvella's synthetic ledger reads: Dr. Smith	Zorvella's synthetic ledger reads: Doctor Smith	Doctor title before a name.
+abbreviation	Zorvella's synthetic ledger reads: St. Paul	Zorvella's synthetic ledger reads: Saint Paul	Saint before a name.
+abbreviation	Zorvella's synthetic ledger reads: Main St.	Zorvella's synthetic ledger reads: Main Street.	Street after a name retains terminal punctuation.
+abbreviation	Zorvella's synthetic ledger reads: Oak Dr.	Zorvella's synthetic ledger reads: Oak Drive.	Drive after a name.
+abbreviation	Zorvella's synthetic ledger reads: Mr. Jones	Zorvella's synthetic ledger reads: Mister Jones	Common honorific.
+abbreviation	Zorvella's synthetic ledger reads: Ms. Jones	Zorvella's synthetic ledger reads: Ms Jones	No phonetic respelling hack for the title.
+abbreviation	Zorvella's synthetic ledger reads: No. 7	Zorvella's synthetic ledger reads: number seven	Number abbreviation must see original digits.
+abbreviation	Zorvella's synthetic ledger reads: #12	Zorvella's synthetic ledger reads: number twelve	Attached number sign inserts a word boundary.
+abbreviation	Zorvella's synthetic ledger reads: Use e.g. apples.	Zorvella's synthetic ledger reads: Use for example apples.	Internal abbreviation punctuation is consumed.
+abbreviation	Zorvella's synthetic ledger reads: etc.	Zorvella's synthetic ledger reads: et cetera.	Terminal abbreviation punctuation also ends a sentence.
+abbreviation	Zorvella's synthetic ledger reads: PDF and NASA	Zorvella's synthetic ledger reads: P D F and NASA	Known initialism versus pronounceable acronym.
+abbreviation	Zorvella's synthetic ledger reads: GREAT idea	Zorvella's synthetic ledger reads: GREAT idea	Do not spell ordinary capitalized words heuristically.
+abbreviation	Zorvella's synthetic ledger reads: iPhone A12	Zorvella's synthetic ledger reads: iPhone A twelve	Preserve brand names; mixed product codes now speak their numeric component.
+address	Zorvella's synthetic ledger reads: name@example.com	Zorvella's synthetic ledger reads: name at example dot com	Email punctuation has explicit spoken names.
+address	Zorvella's synthetic ledger reads: first.last+tag@example.org	Zorvella's synthetic ledger reads: first dot last plus tag at example dot org	Email plus tags and dots.
+address	Zorvella's synthetic ledger reads: user2@example.com	Zorvella's synthetic ledger reads: user two at example dot com	Digits in an email are individual digits, not a count.
+address	Zorvella's synthetic ledger reads: https://example.com/v2	Zorvella's synthetic ledger reads: example dot com slash v two	Scheme is omitted, path is spoken.
+address	Zorvella's synthetic ledger reads: www.example.com	Zorvella's synthetic ledger reads: W W W dot example dot com	Web prefix is spelled.
+address	Zorvella's synthetic ledger reads: Visit example.org.	Zorvella's synthetic ledger reads: Visit example dot org.	Bare common domain retains sentence period.
+address	Zorvella's synthetic ledger reads: https://example.com/a?x=2&y=3	Zorvella's synthetic ledger reads: example dot com slash a question mark x equals two and y equals three	Query separators are not later rewritten as prose symbols.
+range	Zorvella's synthetic ledger reads: 3-5	Zorvella's synthetic ledger reads: three to five	Integer range precedes plain numbers.
+range	Zorvella's synthetic ledger reads: 1.5–2.5	Zorvella's synthetic ledger reads: one point five to two point five	Decimal range precedes decimal rendering.
+range	Zorvella's synthetic ledger reads: -5 to -2	Zorvella's synthetic ledger reads: minus five to minus two	Written to keeps signed endpoint readings.
+range	Zorvella's synthetic ledger reads: -5--2	Zorvella's synthetic ledger reads: minus five to minus two	Signed endpoints with hyphen separator.
+symbol	Zorvella's synthetic ledger reads: 2 ± 1	Zorvella's synthetic ledger reads: two plus or minus one	Uncertainty symbol.
+symbol	Zorvella's synthetic ledger reads: 3 × 4 = 12	Zorvella's synthetic ledger reads: three times four equals twelve	Arithmetic symbols keep spacing.
+symbol	Zorvella's synthetic ledger reads: 2 ≤ 3	Zorvella's synthetic ledger reads: two is less than or equal to three	Comparison symbol.
+symbol	Zorvella's synthetic ledger reads: A & B	Zorvella's synthetic ledger reads: A and B	Ampersand in prose.
+symbol	Zorvella's synthetic ledger reads: @ home	Zorvella's synthetic ledger reads: at home	At sign outside email.
+markup	Zorvella's synthetic ledger reads: **Save** 5%	Zorvella's synthetic ledger reads: Save five percent	Markdown emphasis removed before normalization.
+markup	Zorvella's synthetic ledger reads: [Read this](https://example.org)	Zorvella's synthetic ledger reads: Read this	Markdown link speaks its label, not hidden target.
+markup	Zorvella's synthetic ledger reads: <p>Hello <em>world</em>.</p>	Zorvella's synthetic ledger reads: Hello world.	Basic HTML preserves inline word boundaries.
+markup	Zorvella's synthetic ledger reads: A &amp; B	Zorvella's synthetic ledger reads: A and B	HTML entity decoding precedes symbol handling.
+markup	Zorvella's synthetic ledger reads: &#51; cats	Zorvella's synthetic ledger reads: three cats	Numeric entity decoded before numbers.
+unicode	Zorvella's synthetic ledger reads: ٣.١٤	Zorvella's synthetic ledger reads: three point one four	Unicode decimal digits normalize safely.
+unicode	Zorvella's synthetic ledger reads: １２３	Zorvella's synthetic ledger reads: one hundred twenty-three	Fullwidth decimal digits.
+unicode	Zorvella's synthetic ledger reads: café 5 km	Zorvella's synthetic ledger reads: café five kilometers	Non-ASCII prose survives beside numeric spans.
+unicode	Zorvella's synthetic ledger reads: 猫と犬	Zorvella's synthetic ledger reads: 猫と犬	No transliteration or respelling of unrelated scripts.
+unicode	Zorvella's synthetic ledger reads: ²	Zorvella's synthetic ledger reads: ²	Non-decimal numeric Unicode remains untouched.
+phone	Zorvella's synthetic ledger reads: +44 20 7946 0958	Zorvella's synthetic ledger reads: plus four four, two zero, seven nine four six, zero nine five eight	International grouped telephone preserves boundaries.
+phone	Zorvella's synthetic ledger reads: +49-30-1234-5678	Zorvella's synthetic ledger reads: plus four nine, three zero, one two three four, five six seven eight	Hyphenated international groups.
+range	Zorvella's synthetic ledger reads: $5-$10	Zorvella's synthetic ledger reads: five dollars to ten dollars	Money range recognized before independent monetary endpoints.
+range	Zorvella's synthetic ledger reads: €1.5–2.5	Zorvella's synthetic ledger reads: one euro and fifty cents to two euros and fifty cents	Shared prefix currency applies to both decimal endpoints.
+range	Zorvella's synthetic ledger reads: 5-10 GBP	Zorvella's synthetic ledger reads: five pounds to ten pounds	Shared suffix currency applies to both endpoints.
+range	Zorvella's synthetic ledger reads: $1-2 million	Zorvella's synthetic ledger reads: one million dollars to two million dollars	A shared scale applies to the whole range.
+percent	Zorvella's synthetic ledger reads: 5-10%	Zorvella's synthetic ledger reads: five to ten percent	Shared percentage suffix.
+symbol	Zorvella's synthetic ledger reads: 2 + 3	Zorvella's synthetic ledger reads: two plus three	Binary plus is not a unary sign.
+symbol	Zorvella's synthetic ledger reads: 2+3	Zorvella's synthetic ledger reads: two plus three	Attached binary plus remains audible.
+symbol	Zorvella's synthetic ledger reads: −5	Zorvella's synthetic ledger reads: minus five	Unicode mathematical minus.
+symbol	Zorvella's synthetic ledger reads: 2 < 3	Zorvella's synthetic ledger reads: two is less than three	ASCII comparison symbol.
+symbol	Zorvella's synthetic ledger reads: 4 > 1	Zorvella's synthetic ledger reads: four is greater than one	Greater-than symbol outside markup.
+abbreviation	Zorvella's synthetic ledger reads: C++	Zorvella's synthetic ledger reads: C++	Do not rewrite plus runs in a programming language name.
+address	Zorvella's synthetic ledger reads: HTTPS://example.com/a2	Zorvella's synthetic ledger reads: example dot com slash a two	Scheme handling is case insensitive.
+unicode	Zorvella's synthetic ledger reads: 5 kg	Zorvella's synthetic ledger reads: five kilograms	Nonbreaking space is accepted as a unit separator.
+markup	Zorvella's synthetic ledger reads: &#xD800;	Zorvella's synthetic ledger reads: &#xD800;	Invalid Unicode scalar entity is preserved without panic.
+markup	Zorvella's synthetic ledger reads: &unknown;	Zorvella's synthetic ledger reads: &unknown;	An unknown entity is not reinterpreted as a prose ampersand.
+fraction	The fraction is 7/9.	The fraction is seven ninths.	Explicit fraction context selects rational words, not a calendar date.
+fraction	Mix 3/8 teaspoon into 2 5/6 cups.	Mix three eighths teaspoon into two and five sixths cups.	Recipe context and a mixed number retain both rational quantities.
+fraction	We used 1½ cups and ¾ cup.	We used one and one half cups and three quarters cup.	Unicode fractions and adjacent whole numbers are genuine numeric values.
+fraction	He ate 2/3 of the loaf.	He ate two thirds of the loaf.	An of-phrase supplies unambiguous fraction context.
+fraction	The fraction is 1/2.	The fraction is one half.	Half has an irregular singular denominator.
+fraction	The fraction is -1/4.	The fraction is minus one quarter.	A signed fraction retains its sign and irregular quarter denominator.
+fraction	The fraction is 5/0.	The fraction is 5/0.	A zero denominator is invalid and must not be silently rewritten.
+date	The date is 3/4.	The date is 3/4.	Explicit calendar context keeps an ambiguous yearless date unchanged.
+fraction	Use 1/2 kg of flour.	Use one half of a kilogram of flour.	Fractional measurements consume the unit before raw/final span protection.
+identifier	ISBN 978-1-4028-9462-6.	I S B N nine seven eight one four zero two eight nine four six two six.	ISBN groups encode identity, never cardinal amounts or number ranges.
+identifier	Check ISBN-10: 0-8044-2957-X.	Check I S B N ten: zero eight zero four four two nine five seven X.	ISBN-10 label and X check character are retained; leading zero is significant.
+identifier	ISBN 9781402894626 is printed here.	I S B N nine seven eight one four zero two eight nine four six two six is printed here.	Ungrouped ISBN is digitwise too; following prose is not consumed.
+identifier	Your PIN is 0724.	Your PIN is zero seven two four.	PIN context preserves the leading zero, not a seven-hundred quantity.
+identifier	Serial number QX-704C is on the label.	Serial number Q X seven zero four C is on the label.	Explicit serial context spells all letters and digits without losing zero.
+identifier	ZIP code 02139-4307.	ZIP code zero two one three nine four three zero seven.	ZIP+4 groups are identifier digits, not a numerical range.
+identifier	The ID is 00056.	The I D is zero zero zero five six.	ID context must survive initialism expansion and preserve all zeros.
+version	Use version 12.10.3, not v8.02.	Use version twelve point ten point three, not version eight point zero two.	Explicit version cues preserve segment boundaries and leading zeros.
+version	Install v03.009.0-beta2.	Install version zero three point zero zero nine point zero beta two.	Version suffix and zero-padded components remain recoverable.
+product	The plane is an A320.	The plane is an A three hundred twenty.	A mixed product code separates letter names from its numerical component.
+product	The sample contains H2O and CO2.	The sample contains H two O and C O two.	Formula letters and stoichiometric numbers remain individually recoverable.
+product	Compare RX-780 with RX-079.	Compare R X seven hundred eighty with R X zero seven nine.	Product component leading zeros are significant; other groups are cardinals.
+product	iPhone15 and WiFi6 are names.	iPhone fifteen and WiFi six are names.	Readable mixed-case brands are not replaced with phonetic hacks.
+context	3 kg, 4th place, 2028-06-17 and NASA.	three kilograms, fourth place, June seventeenth, twenty twenty-eight and NASA.	Units, ordinals, Gregorian dates and acronym words keep their existing behavior.
+product	COVID-19 and SARS-CoV-2.	COVID nineteen and SARS CoV two.	Known acronym words remain words inside mixed codes; no respelling.
+version	Build 03.004.5 is ready.	Build zero three dot zero zero four dot five is ready.	Unprefixed dotted sequence components also preserve their leading zeros.
+identifier	PIN:0724.	PIN: zero seven two four.	A punctuation-adjacent PIN is spaced and preserves every digit.
+record	Account number 00004721.	Account number zero zero zero zero four seven two one.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Routing number 000012340.	Routing number zero zero zero zero one two three four zero.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	MRN 0000567.	M R N zero zero zero zero five six seven.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Routing number 000012340 42 payments.	Routing number zero zero zero zero one two three four zero forty-two payments.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	SSN 000 12 0345.	S S N zero zero zero one two zero three four five.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	IBAN DE00 0000 0000.	IBAN DE00 0000 0000.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Member ID: 000074.	Member I D: zero zero zero zero seven four.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Medical record number AB-0042 is here.	Medical record number A B zero zero four two is here.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	SSN 000-12-0345.	S S N zero zero zero one two zero three four five.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Tax ID 00-0000427.	Tax I D zero zero zero zero zero zero four two seven.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Passport number X0000027.	Passport number X zero zero zero zero zero two seven.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Card number 0000 0000 0000 0042.	Card number zero zero zero zero zero zero zero zero zero zero zero zero zero zero four two.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	CVV: 007.	C V V: zero zero seven.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	SWIFT BIC TESTGB2LXXX.	SWIFT B I C T E S T G B two L X X X.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	BIC TESTGBXX.	B I C T E S T G B X X.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Policy number 000007 and 3 claims.	Policy number zero zero zero zero zero seven and three claims.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	The account balance is 42 dollars.	The account balance is forty-two dollars.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+record	Cardiology7 and MRName3 are names.	Cardiology seven and MRName three are names.	Explicit record context preserves the complete alphanumeric identity; unrelated prose stays ordinary.
+network	IPv6 2001:db8::42.	I P version six two zero zero one colon D B eight double colon four two.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	MAC 02:00:5E:10:00:07.	M A C zero two colon zero zero colon five E colon one zero colon zero zero colon zero seven.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	MAC 02-00-5e-10-00-07.	M A C zero two dash zero zero dash five E dash one zero dash zero zero dash zero seven.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	IP address 192.0.2.17:8042.	I P address one hundred ninety-two dot zero dot two dot seventeen port eight thousand forty-two.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	Subnet 192.0.2.0/24.	Subnet one hundred ninety-two dot zero dot two dot zero slash twenty-four.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	Host ::1.	Host double colon one.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	IPv6 ::.	I P version six double colon.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	IPv6 2001:db8::/32.	I P version six two zero zero one colon D B eight double colon slash thirty-two.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	Clock 02:00:07.	Clock two o'clock and seven seconds.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	Version 12.10.3.	Version twelve point ten point three.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+network	IPv4 300.0.2.17.	I P version four 300.0.2.17.	Validated technical syntax preserves address structure; clocks/versions and invalid labelled values are contrasts.
+postal	Send it to 2087 S. Willow Ave., Apt. 04B.	Send it to two thousand eighty-seven South Willow Avenue, Apartment zero four B.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Visit 64 NW Cedar Dr.	Visit sixty-four Northwest Cedar Drive.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Room 007.	Room zero zero seven.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Suite B04.	Suite B zero four.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Floor 12.	Floor twelve.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Room count is 20.	Room count is twenty.	House/street or unit context disambiguates address components without guessing ordinary prose.
+postal	Dr. Vale has 4 appointments.	Doctor Vale has four appointments.	House/street or unit context disambiguates address components without guessing ordinary prose.
+clinical	Blood pressure 118/76 mmHg.	Blood pressure one hundred eighteen over seventy-six millimeters of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	BP: 104/68.	B P: one hundred four over sixty-eight.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	Blood pressure was recorded at 126/82 mmHg.	Blood pressure was recorded at one hundred twenty-six over eighty-two millimeters of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	Read 118/76 mmHg.	Read one hundred eighteen over seventy-six millimeters of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	Use 1/2 mmHg.	Use one half of a millimeter of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	The fraction is 118/76 mmHg.	The fraction is one hundred eighteen seventy-sixths millimeters of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	A fraction of 1/2 kg is not a blood pressure of 118/76 mmHg.	A fraction of one half of a kilogram is not a blood pressure of one hundred eighteen over seventy-six millimeters of mercury.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	The date is 3/4; the clock is 12:08.	The date is 3/4; the clock is twelve oh eight.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+clinical	The ratio is 7/9.	The ratio is seven ninths.	Typed blood pressure precedes rational fractions; explicit mathematical/date contexts keep their own readings.
+network	Connect [2001:db8::42]:8042.	Connect open bracket two zero zero one colon D B eight double colon four two close bracket port eight thousand forty-two.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+network	IPv6 fe80::1%en0.	I P version six F E eight zero double colon one percent E N zero.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+network	MAC address 02:00:5E:10:00:07 and 3 devices.	M A C address zero two colon zero zero colon five E colon one zero colon zero zero colon zero seven and three devices.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+network	IPv6 2001:db8::/129.	I P version six 2001:db8::/129.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+network	IPv4 192.0.2.0/33.	I P version four 192.0.2.0/33.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+network	The MAC is fast.	The MAC is fast.	Preserve IPv6 compression, zone identifiers, port/prefix bounds and surrounding prose; do not infer technical meaning for ordinary words.
+record	IBAN DE00 0000 0000 0000 0000 00.	I B A N D E zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero.	Typed IBAN length/group boundaries preserve all twenty zeros, without asserting checksum/account validity.
+record	IBAN DE00000000000000000000.	I B A N D E zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero zero.	Typed IBAN length/group boundaries preserve all twenty zeros, without asserting checksum/account validity.
+network	UUID 00000000-0000-0000-0000-000000000042.	U U I D zero zero zero zero zero zero zero zero dash zero zero zero zero dash zero zero zero zero dash zero zero zero zero dash zero zero zero zero zero zero zero zero zero zero four two.	UUID hexadecimal digits, leading zeros and dash boundaries are literal identity, not quantities.

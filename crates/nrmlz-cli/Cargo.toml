@@ -1,0 +1,22 @@
+[package]
+name = "nrmlz-cli"
+description = "Command-line front end for nrmlz"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "nrmlz"
+path = "src/main.rs"
+
+[dependencies]
+nrmlz = { workspace = true, features = ["lexicon-toml", "lexicon-json"] }
+clap = { version = "4.6", features = ["derive"] }
+config = { version = "0.15", default-features = false, features = ["toml"] }
+dirs = "6"
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
